@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Limassol Carnival: YES ή NO</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding-top: 100px;
+      background: #f7f7f7;
+    }
+    h1 {
+      font-size: 2.5rem;
+      color: #d2232a; /* κόκκινο καρναβαλιού */
+    }
+    #answer {
+      font-size: 5rem;
+      margin: 50px;
+      color: #2a2a2a;
+    }
+    button {
+      padding: 15px 30px;
+      font-size: 1.5rem;
+      cursor: pointer;
+      border: none;
+      background-color: #0077cc;
+      color: white;
+      border-radius: 8px;
+    }
+    button:hover {
+      background-color: #005fa3;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>🎭 Limassol Carnival: YES ή NO?</h1>
+  <div id="answer">—</div>
+  <button onclick="giveAnswer()">Τύχαιo Αποτέλεσμα</button>
+
+  <script>
+    function giveAnswer() {
+      const options = ["YES 🎉", "NO 😎"];
+      const randomIndex = Math.floor(Math.random() * options.length);
+      document.getElementById("answer").textContent = options[randomIndex];
+    }
+  </script>
+
+</body>
+</html>
